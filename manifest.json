@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Tweet Filter",
+    "version": "1.0",
+    "description": "Remove tweets containing specific words or characters",
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "content.js"
+            ],
+            "matches": [
+                "https://x.com/*",
+                "https://twitter.com/*"
+            ]
+        }
+    ]
+}
